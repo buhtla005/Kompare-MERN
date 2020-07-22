@@ -4,12 +4,12 @@ const morgan = require('morgan')
 const path = require('path')
 const routes = require('./routes/api')
 
+require('dotenv').config()
 
 const app = express()
 const PORT = process.env.PORT || 8080;
-const MONGODB_URL = 'mongodb+srv://buhtla005:LOR16seawh@komparedb.tsu7c.mongodb.net/komparedb?retryWrites=true&w=majority'
 
-mongoose.connect( MONGODB_URL || 'mongodb://localhost/localUsers', {
+mongoose.connect( 'mongodb+srv://buhtla005:LOR16seawh@komparedb.tsu7c.mongodb.net/komparedb?retryWrites=true&w=majority' || 'mongodb://localhost/localUsers', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
