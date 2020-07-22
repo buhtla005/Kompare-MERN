@@ -24,7 +24,7 @@ app.use(express.urlencoded({extended: false}))
 //HTTP request logger
 app.use(morgan('tiny'))
 
-app.use("/", routes)
+app.use("/api", routes)
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('/client/build'))

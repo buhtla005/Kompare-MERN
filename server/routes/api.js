@@ -9,7 +9,7 @@ const { json } = require('express')
 //ROUTES
 
 //Get all users and fill the list
-router.get('/api/users', (req, res) => {
+router.get('/', (req, res) => {
 
     User.find({})
     .then((data) => {
@@ -21,7 +21,7 @@ router.get('/api/users', (req, res) => {
 })
 
 //Add new user on the list
-router.post('/api/adduser', (req, res) => {
+router.post('/adduser', (req, res) => {
     const data = req.body;
     const newUser = new User(data)
     newUser.save((error) => {
@@ -36,7 +36,7 @@ router.post('/api/adduser', (req, res) => {
 })
 
 
-router.delete('/api/delete/:id', async (req, res) => { 
+router.delete('/delete/:id', async (req, res) => { 
     User.findByIdAndDelete(req.params.id, (error, user) => {
         if(error){
             res.status(500),json({msg: 'There was a problem deleting the user.'})
