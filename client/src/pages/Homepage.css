@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url('../img/pic1.jpg');
+    background-color: darkslategray;
+    background-blend-mode: multiply;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.content-to-mid{
+    margin: auto;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: black 10px 10px 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.register-container{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.naslov{
+    margin: 1em;
+    text-align: start;
+    color: orange;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.register, .table{
+    margin: auto;
+    margin-top: 2%;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: darkred 5px 5px 20px;
+}
+
+.table{
+    width: 90%;
+    margin: auto;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: darkred 5px 5px 20px;
+    padding-bottom: 8px;
+}
+
+.table-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+

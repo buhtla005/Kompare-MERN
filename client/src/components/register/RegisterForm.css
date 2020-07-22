@@ -1,0 +1,36 @@
+.form-content{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
+    
+}
+
+.form-content form{
+    margin: auto;
+}
+
+.position-div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.position-div label{
+    font-size: large;
+    color: darkred;
+}
+
+.position-div .input-field{
+    margin-left: 1em;
+    height: 3vh;
+    width: 200px;
+}
+
+.submit-button{
+    width: 100%;
+    height: 30px;
+    font-size: larger;
+    font-weight: 500;
+    margin: auto;
+    background-color: orange;
+}

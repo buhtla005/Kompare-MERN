@@ -1,0 +1,44 @@
+.table-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.extra-info{
+    margin:auto;
+    margin-top: 10vh;
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.table-main{
+    margin: auto;
+    width: 90%;
+    text-align: center;
+}
+
+th{
+    padding: 5px;
+    font-size: x-large;
+    font-weight: 700;
+    border-bottom: darkred 2px solid;
+}
+
+td{
+    padding-top: 10px;
+    font-size: large;
+    font-weight: 500;
+    text-align: left;
+    text-indent: 10px;
+}
+
+.table-button{
+    width: 80px;
+    height: 30px;
+    font-size: large;
+    font-weight: 500;
+    background-color: darkred;
+    color: aliceblue;
+    margin: auto;
+}
+
