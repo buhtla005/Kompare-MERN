@@ -15,7 +15,7 @@ import axios from 'axios'
 
 export const fetchUsers = () => (dispatch) => {
     dispatch(fetchUsersRequest())
-    axios.get('/api/users').then(response => {
+    axios.get('/api/').then(response => {
         const users = response.data
         dispatch(fetchUsersSuccess(users))
       })
