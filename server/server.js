@@ -7,9 +7,9 @@ const routes = require('./routes/api')
 
 const app = express()
 const PORT = process.env.PORT || 8080;
-const MONGODB_URL = 'mongodb+srv://buhtla005:LOR16seawh@komparedb.tsu7c.mongodb.net/<dbname>?retryWrites=true&w=majority'
+const MONGODB_URL = 'mongodb+srv://buhtla005:LOR16seawh@komparedb.tsu7c.mongodb.net/komparedb?retryWrites=true&w=majority'
 
-mongoose.connect( process.env.MONGODB_URL || 'mongodb://localhost/localUsers', {
+mongoose.connect( MONGODB_URL || 'mongodb://localhost/localUsers', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
@@ -23,12 +23,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 //HTTP request logger
 app.use(morgan('tiny'))
+
 app.use("/api", routes)
-
-
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('client/build'))
-}
-
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`))
