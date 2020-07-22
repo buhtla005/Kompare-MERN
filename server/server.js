@@ -7,9 +7,9 @@ require('dotenv').config()
 
 
 const app = express()
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT
 
-mongoose.connect( process.env.MONGODB_URL || 'mongodb://localhost/localUsers', {
+mongoose.connect( process.env.MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true
